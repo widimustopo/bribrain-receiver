@@ -30,7 +30,7 @@ func (RkaService) AddRKA(ctx context.Context, in *rka.RKA) (*rka.ResponseRKA, er
 	}, nil
 }
 
-func (RkaService) AddUserRKA(ctx context.Context, in *rka.UserRKA) (*rka.ResponseUserRKA, error) {
+func (RkaService) AddUserRKA(ctx context.Context, in *rka.RequestUserRKA) (*rka.ResponseUserRKA, error) {
 	logrus.Info("AddUserRKA data in : ", in)
 	return &rka.ResponseUserRKA{
 		Code:    http.StatusOK,
